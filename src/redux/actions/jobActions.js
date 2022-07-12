@@ -5,7 +5,7 @@ export const getAllJobs = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.get(
-      "https://sathyajobs.herokuapp.com/getalljobs"
+      "https://sathyajobs.herokuapp.com/api/jobs/getalljobs"
     );
     dispatch({ type: "GET_ALL_JOBS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
@@ -21,7 +21,7 @@ export const postJob = (values) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.post(
-      "https://sathyajobs.herokuapp.com/postjob",
+      "https://sathyajobs.herokuapp.com/api/jobs/postjob",
       values
     );
 
@@ -41,7 +41,7 @@ export const editJob = (values) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.post(
-      "https://sathyajobs.herokuapp.com/editjob",
+      "https://sathyajobs.herokuapp.com/api/jobs/editjob",
       values
     );
 
@@ -62,7 +62,7 @@ export const applyJob = (job) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.post(
-      "https://sathyajobs.herokuapp.com/applyjob",
+      "https://sathyajobs.herokuapp.com/api/jobs/applyjob",
       { job, user }
     );
 
@@ -82,7 +82,7 @@ export const searchJobs = (searchKey) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.get(
-      "https://sathyajobs.herokuapp.com/getalljobs"
+      "https://sathyajobs.herokuapp.com/api/jobs/getalljobs"
     );
     const jobs = response.data;
     const filteredJobs = jobs.filter((job) =>
@@ -101,7 +101,7 @@ export const sortJobs = (values) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.get(
-      "https://sathyajobs.herokuapp.com/getalljobs"
+      "https://sathyajobs.herokuapp.com/api/jobs/getalljobs"
     );
     const jobs = response.data;
     var filteredJobs = jobs
