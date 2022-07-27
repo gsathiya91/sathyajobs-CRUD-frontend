@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import { registerUser } from '../redux/actions/userAction';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css';
+
 AOS.init();
 
 
@@ -27,7 +27,7 @@ function register(values) {
   return (
     <div className="register">
     <Row justify="center" className="flex align-items-center" >
-    <Col lg={5}><h1 className="heading1" data-aos='slide-right' >SATHYA</h1></Col>
+    <Col lg={5}><h1 className="heading1" data-aos='slide-right' >FINE</h1></Col>
       <Col lg={10} sm={24} className="bs1 p-5 register-form">
         <h3>Register</h3>
         <hr />

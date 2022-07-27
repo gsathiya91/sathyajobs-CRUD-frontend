@@ -43,7 +43,7 @@ logout = () => {
         >
           <div className="logo">
             {/* conditional rendering to show the name in sider  */}
-            {this.state.collapsed ? <h1>SJ</h1> : <h1>SATHYA JOBS</h1>}
+            {this.state.collapsed ? <h1>FJ</h1> : <h1>FINE JOBS</h1>}
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={[window.location.pathname]}>
             <Menu.Item key="/" icon={<HomeOutlined />}>
@@ -87,7 +87,6 @@ logout = () => {
              <h5 className="usertext mr-2"><b>{user.username}</b></h5>
              </div>
              
-
 
             </div>
            

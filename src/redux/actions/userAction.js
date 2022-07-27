@@ -5,7 +5,7 @@ export const registerUser = (values) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("https://mern-job-app.herokuapp.com/api/users/register", values);
+    await axios.post("https://findjobsappusingmern.herokuapp.com/api/users/register", values);
     message.success("User Registered Successfully");
     setTimeout(() => {
       window.location.href = "/login";
@@ -22,7 +22,7 @@ export const loginUser = (values) => async (dispatch) => {
 
   try {
     const user = await axios.post(
-      "https://mern-job-app.herokuapp.com/api/users/login",
+      "https://findjobsappusingmern.herokuapp.com/api/users/login",
       values
     );
     message.success("User Logged In Successfully");
@@ -46,7 +46,7 @@ export const updateUser = (values) => async (dispatch) => {
 
   try {
     const user = await axios.post(
-      "https://mern-job-app.herokuapp.com/api/users/update",
+      "https://findjobsappusingmern.herokuapp.com/api/users/update",
       values
     );
     message.success("User Updated Successfully");
@@ -65,7 +65,7 @@ export const getAllUsers = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   try {
     const response = await axios.get(
-      "https://mern-job-app.herokuapp.com/api/users/getallusers"
+      "https://findjobsappusingmern.herokuapp.com/api/users/getallusers"
     );
     dispatch({ type: "GET_ALL_USERS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });

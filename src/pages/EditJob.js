@@ -20,14 +20,14 @@ function EditJob({ match }) {
     const finalObj = { ...jobInfo, ...values };
 
     finalObj._id = match.params.id;
-    // console.log(finalObj);
+
     dispatch(editJob(finalObj));
   }
   const { jobs } = useSelector((state) => state.jobsReducer);
 
   const job = jobs.find((job) => job._id === match.params.id);
 
-//   console.log(job);
+
   return (
     <div>
       <DefaultLayout>
@@ -172,8 +172,8 @@ function EditJob({ match }) {
                 }}
               >
                 Previous
-              </Button>
-              <Button htmlType="submit">Edit Job</Button>
+              </Button>&nbsp;&nbsp;
+              <Button htmlType="submit">Update Job</Button>
             </Form>
           </TabPane>
         </Tabs>

@@ -14,14 +14,14 @@ function Profile() {
 
   function onPersonalInfoSubmit(values) {
     setPersonalInfo(values);
-    // console.log(values);
+    
     setActiveTab("2");
   }
 
   function onFinalFinish(values) {
 
     const finalObj = {...personalInfo , ...values}
-    // console.log(finalObj);
+    
     dispatch(updateUser(finalObj))
 
   }
