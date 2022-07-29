@@ -14,7 +14,7 @@ function PostedJobs() {
   const history = useHistory();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedJob, setSelectedJob] = useState();
-  
+  // console.log(userPostedJobs);
 
   const columns = [
     {

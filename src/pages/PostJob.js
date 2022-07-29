@@ -18,6 +18,7 @@ function PostJob() {
   }
   function onFinalFormFinish(values) {
     const finalObj = { ...jobInfo, ...values };
+    // console.log(finalObj);
     dispatch(postJob(finalObj));
   }
   return (

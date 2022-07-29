@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import { loginUser } from "../redux/actions/userAction";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
-
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 AOS.init();
 function Login() {
-  const dispatch = useDispatch();
-  function login(values) {
-    dispatch(loginUser(values))
-  }
+    const dispatch = useDispatch();
+    function login(values){
+        dispatch(loginUser(values))
+    }
 
   return (
     <div className="login">
@@ -38,9 +38,9 @@ function Login() {
             </Form.Item>
 
             <Button htmlType="submit" className="mb-3">Login</Button><br />
-            <Link to='/register' className='mt-3'>Not Registered Yet ? Click here</Link><br />
-            <p><strong>Admin</strong> Username : test,  Password : 123456</p>
-            <p><strong>User</strong> Username : test1, Password : 123456</p>
+            <Link to='/register' className='mt-3'>Not Registered Yet ? Click here</Link>
+            <p>username:test</p>
+            <p>password:123456</p>
           </Form>
         </Col>
         <Col lg={5}><h1 className="heading2" data-aos='slide-right'>Jobs</h1></Col>
