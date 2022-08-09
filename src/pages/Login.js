@@ -21,7 +21,9 @@ function Login() {
           <h3>Login</h3>
           <hr />
           <Form layout="vertical" onFinish={login}>
+            
             <Form.Item
+            type="text"
               label="username"
               name="username"
               rules={[{ required: true }]}
@@ -30,11 +32,12 @@ function Login() {
             </Form.Item>
 
             <Form.Item
+               type="password"
               label="password"
               name="password"
               rules={[{ required: true }]}
             >
-              <Input />
+              <Input type="password"/>
             </Form.Item>
 
             <Button htmlType="submit" className="mb-3">Login</Button><br />
