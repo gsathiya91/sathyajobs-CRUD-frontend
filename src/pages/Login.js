@@ -24,7 +24,7 @@ function Login() {
             
             <Form.Item
             type="text"
-              label="username"
+              label="User Name"
               name="username"
               rules={[{ required: true }]}
             >
@@ -32,7 +32,7 @@ function Login() {
             </Form.Item>
 
             <Form.Item
-               type="password"
+               type="Password"
               label="password"
               name="password"
               rules={[{ required: true }]}
@@ -42,8 +42,9 @@ function Login() {
 
             <Button htmlType="submit" className="mb-3">Login</Button><br />
             <Link to='/register' className='mt-3'>Not Registered Yet ? Click here</Link>
-            <p><strong>Admin </strong>Username: test, password: 123456</p>
-            <p><strong>User </strong>Username: test1, password: 123456</p>
+            <p><strong>Admin </strong>Username: test,  password: 123456</p>
+            <hr />
+            <p><strong>User </strong>Username: test1,  password: 123456</p>
           </Form>
         </Col>
         <Col lg={5}><h1 className="heading2" data-aos='slide-right'>Jobs</h1></Col>

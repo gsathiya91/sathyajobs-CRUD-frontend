@@ -34,7 +34,7 @@ function register(values) {
         <Form layout="vertical" onFinish={register} >
           <Form.Item
             type="text"
-            label="username"
+            label="User Name"
             name="username"
             rules={[{ required: true }]}
           >
@@ -42,7 +42,7 @@ function register(values) {
           </Form.Item>
 
           <Form.Item
-            label="password"
+            label="Password"
             name="password"
             rules={[{ required: true }]}
           >
@@ -51,7 +51,7 @@ function register(values) {
         
           <Form.Item
           type="password"
-            label="confirm password"
+            label="Confirm Password"
             name="confirmpassword"
             rules={[{ required: true }]}
           >
