@@ -32,8 +32,8 @@ function Login() {
             </Form.Item>
 
             <Form.Item
-               type="Password"
-              label="password"
+               type="password"
+              label="Password"
               name="password"
               rules={[{ required: true }]}
             >
